@@ -8,5 +8,10 @@ export default function(myState=_INITIAL_STATE, action)
 {
     console.log('Reducer (UserLoggedIn) received an action: ', action);
 
-    return myState;
+    switch (action.type)
+    {
+        default:
+            return myState;
+    }
+
 }
