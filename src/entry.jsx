@@ -10,17 +10,16 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 
 import RootReducer from './reducers/rootReducer';
+import routes from './routes.jsx';
 
 //var Styles = require('../css/app.scss');    // just to compile styles
-
-//const blah = applyMiddleware(ReduxPromise)(createStore);
-
 
 
 ReactDOM.render(
     <Provider store={applyMiddleware(ReduxPromise)(createStore)(RootReducer)}>
-        <h1>Hello.</h1>
+        { routes }
     </Provider>
     ,
+
     document.getElementById('app-container')
 );
